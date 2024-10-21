@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{E12DFAB1-43B2-4887-913D-905564C95AED}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{EB3D8146-DE1B-4305-811F-C2DCC138036A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -297,7 +297,7 @@
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[FilmSA]</property>
+                  name="OpenRowset">[dbo].[FilmSA]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -359,22 +359,6 @@
                       cachedName="FilmId"
                       externalMetadataColumnId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[FilmId]"
                       lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[FilmId]" />
-                    <inputColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].Columns[FirstName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="45"
-                      cachedName="FirstName"
-                      externalMetadataColumnId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[FirstName]"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[FirstName]" />
-                    <inputColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].Columns[LastName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="45"
-                      cachedName="LastName"
-                      externalMetadataColumnId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastName]"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[LastName]" />
                     <inputColumn
                       refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].Columns[Title]"
                       cachedCodepage="1252"
@@ -456,20 +440,6 @@
                       cachedName="LastUpdate"
                       externalMetadataColumnId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastUpdate]"
                       lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[LastUpdate]" />
-                    <inputColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].Columns[CategoryName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="25"
-                      cachedName="CategoryName"
-                      externalMetadataColumnId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[CategoryName]"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[CategoryName]" />
-                    <inputColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].Columns[StoreId]"
-                      cachedDataType="i4"
-                      cachedName="StoreId"
-                      externalMetadataColumnId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[StoreId]"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[StoreId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -477,18 +447,6 @@
                       refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[FilmId]"
                       dataType="i4"
                       name="FilmId" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="LastName" />
                     <externalMetadataColumn
                       refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[Title]"
                       codePage="1252"
@@ -548,16 +506,6 @@
                       refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastUpdate]"
                       dataType="dbTimeStamp"
                       name="LastUpdate" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      name="CategoryName" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB].ExternalColumns[StoreId]"
-                      dataType="i4"
-                      name="StoreId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -602,7 +550,7 @@
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[LocationSA]</property>
+                  name="OpenRowset">[dbo].[LocationSA]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -1671,8 +1619,6 @@
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
     f.film_id AS FilmId, 
-    a.first_name AS FirstName, 
-    a.last_name AS LastName, 
     f.title AS Title, 
     f.description AS Description, 
     f.release_year AS ReleaseYear, 
@@ -1683,23 +1629,11 @@
     f.replacement_cost AS ReplacementCost, 
     f.rating AS Rating, 
     f.special_features AS SpecialFeatures, 
-    f.last_update AS LastUpdate, 
-    c.name AS CategoryName,
-i.store_id AS StoreId
+    f.last_update AS LastUpdate
 FROM 
     dbo.film f
 INNER JOIN 
-    dbo.film_actor fa ON f.film_id = fa.film_id
-INNER JOIN 
-    dbo.actor a ON fa.actor_id = a.actor_id
-INNER JOIN 
-    dbo.film_category fc ON f.film_id = fc.film_id
-INNER JOIN 
-    dbo.category c ON fc.category_id = c.category_id 
-INNER JOIN 
-    dbo.language l ON f.language_id = l.language_id
-INNER JOIN 
-    dbo.inventory i ON f.film_id = i.film_id;</property>
+    dbo.language l ON f.language_id = l.language_id</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -1743,28 +1677,6 @@ INNER JOIN
                       externalMetadataColumnId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[FilmId]"
                       lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[FilmId]"
                       name="FilmId"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[FirstName]"
-                      length="45"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[FirstName]"
-                      name="FirstName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[LastName]"
-                      length="45"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[LastName]"
-                      name="LastName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[Title]"
@@ -1880,26 +1792,6 @@ INNER JOIN
                       lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[LastUpdate]"
                       name="LastUpdate"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[CategoryName]"
-                      length="25"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[CategoryName]"
-                      name="CategoryName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[StoreId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[StoreId]"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].Columns[StoreId]"
-                      name="StoreId"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1907,18 +1799,6 @@ INNER JOIN
                       refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[FilmId]"
                       dataType="i4"
                       name="FilmId" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="LastName" />
                     <externalMetadataColumn
                       refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[Title]"
                       codePage="1252"
@@ -1978,16 +1858,6 @@ INNER JOIN
                       refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[LastUpdate]"
                       dataType="dbTimeStamp"
                       name="LastUpdate" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      name="CategoryName" />
-                    <externalMetadataColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB].ExternalColumns[StoreId]"
-                      dataType="i4"
-                      name="StoreId" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2000,20 +1870,6 @@ INNER JOIN
                       dataType="i4"
                       lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[FilmId]"
                       name="FilmId" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[FirstName]"
-                      name="FirstName" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[LastName]"
-                      name="LastName" />
                     <outputColumn
                       refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[Title]"
                       codePage="1252"
@@ -2084,18 +1940,6 @@ INNER JOIN
                       dataType="dbTimeStamp"
                       lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[LastUpdate]"
                       name="LastUpdate" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[CategoryName]"
-                      name="CategoryName" />
-                    <outputColumn
-                      refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[StoreId]"
-                      dataType="i4"
-                      lineageId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[StoreId]"
-                      name="StoreId" />
                     <outputColumn
                       refId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -3162,34 +3006,34 @@ INNER JOIN
           <paths>
             <path
               refId="Package\Full Load.Paths[Salida de origen de OLE DB]"
-              endId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB]"
-              name="Salida de origen de OLE DB"
-              startId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\Full Load.Paths[Salida de origen de OLE DB1]"
               endId="Package\Full Load\OLE_DST_Location_SA.Inputs[Entrada de destino de OLE DB]"
               name="Salida de origen de OLE DB"
               startId="Package\Full Load\OLE_SRC_Location_OLTP.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\Full Load.Paths[Salida de origen de OLE DB2]"
+              refId="Package\Full Load.Paths[Salida de origen de OLE DB1]"
               endId="Package\Full Load\OLE_DST_Store_SA.Inputs[Entrada de destino de OLE DB]"
               name="Salida de origen de OLE DB"
               startId="Package\Full Load\OLE_SRC_Store_OLTP.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\Full Load.Paths[Salida de origen de OLE DB3]"
+              refId="Package\Full Load.Paths[Salida de origen de OLE DB2]"
               endId="Package\Full Load\OLE_DST_Customer_SA.Inputs[Entrada de destino de OLE DB]"
               name="Salida de origen de OLE DB"
               startId="Package\Full Load\OLE_SRC_Customer_OLTP.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\Full Load.Paths[Salida de origen de OLE DB4]"
+              refId="Package\Full Load.Paths[Salida de origen de OLE DB3]"
               endId="Package\Full Load\OLE_DST_Rental_SA.Inputs[Entrada de destino de OLE DB]"
               name="Salida de origen de OLE DB"
               startId="Package\Full Load\OLE_SRC_Rental_OTLP.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\Full Load.Paths[Salida de origen de OLE DB5]"
+              refId="Package\Full Load.Paths[Salida de origen de OLE DB4]"
               endId="Package\Full Load\OLE_DST_Staff_SA.Inputs[Entrada de destino de OLE DB]"
               name="Salida de origen de OLE DB"
               startId="Package\Full Load\OLE_SRC_Staff_OLTP.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\Full Load.Paths[Salida de origen de OLE DB5]"
+              endId="Package\Full Load\OLE_DST_Film_SA.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Full Load\OLE_SRC_Film_OTLP.Outputs[Salida de origen de OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -4179,7 +4023,7 @@ where [refTable].[FilmId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indica si se debe hacer referencia a metadatos en formato XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="FilmId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FirstName" dataType="DT_STR" length="45" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LastName" dataType="DT_STR" length="45" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Description" dataType="DT_TEXT" length="0" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ReleaseYear" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LanguageName" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RentalDuration" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RentalRate" dataType="DT_NUMERIC" length="0" precision="4" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Length" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ReplacementCost" dataType="DT_NUMERIC" length="0" precision="5" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Rating" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SpecialFeatures" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LastUpdate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CategoryName" dataType="DT_STR" length="25" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StoreId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="FilmId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Title" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Description" dataType="DT_TEXT" length="0" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ReleaseYear" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LanguageName" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RentalDuration" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RentalRate" dataType="DT_NUMERIC" length="0" precision="4" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Length" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ReplacementCost" dataType="DT_NUMERIC" length="0" precision="5" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Rating" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SpecialFeatures" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LastUpdate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4288,8 +4132,6 @@ where [refTable].[FilmId] = ?</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE dbo.FilmSA
 SET 
-    FirstName = ?, 
-    LastName = ?, 
     Title = ?, 
     Description = ?, 
     ReleaseYear = ?, 
@@ -4300,9 +4142,7 @@ SET
     ReplacementCost = ?, 
     Rating = ?, 
     SpecialFeatures = ?, 
-    LastUpdate = ?, 
-    CategoryName = ?, 
-    StoreId = ?
+    LastUpdate = ?
 WHERE 
     FilmId = ?;</property>
                 <property
@@ -4327,41 +4167,19 @@ WHERE
                   name="Entrada de comando de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[FirstName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="45"
-                      cachedName="FirstName"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FirstName]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[LastName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="45"
-                      cachedName="LastName"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastName]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[FilmId]"
-                      cachedDataType="i4"
-                      cachedName="FilmId"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_15]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FilmId]" />
-                    <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Title]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Title"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Title]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Description]"
                       cachedCodepage="1252"
                       cachedDataType="text"
                       cachedName="Description"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Description]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[ReleaseYear]"
@@ -4369,7 +4187,7 @@ WHERE
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="ReleaseYear"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ReleaseYear]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[LanguageName]"
@@ -4377,13 +4195,13 @@ WHERE
                       cachedDataType="str"
                       cachedLength="20"
                       cachedName="LanguageName"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LanguageName]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[RentalDuration]"
                       cachedDataType="ui1"
                       cachedName="RentalDuration"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_6]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[RentalDuration]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[RentalRate]"
@@ -4391,13 +4209,13 @@ WHERE
                       cachedName="RentalRate"
                       cachedPrecision="4"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[RentalRate]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Length]"
                       cachedDataType="i2"
                       cachedName="Length"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_6]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Length]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[ReplacementCost]"
@@ -4405,7 +4223,7 @@ WHERE
                       cachedName="ReplacementCost"
                       cachedPrecision="5"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_9]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_7]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ReplacementCost]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Rating]"
@@ -4413,36 +4231,28 @@ WHERE
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Rating"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_10]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_8]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Rating]" />
+                    <inputColumn
+                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[FilmId]"
+                      cachedDataType="i4"
+                      cachedName="FilmId"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_11]"
+                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FilmId]" />
+                    <inputColumn
+                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[LastUpdate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LastUpdate"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_10]"
+                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastUpdate]" />
                     <inputColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[SpecialFeatures]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="SpecialFeatures"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_11]"
+                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_9]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[SpecialFeatures]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[LastUpdate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="LastUpdate"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_12]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastUpdate]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[CategoryName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="25"
-                      cachedName="CategoryName"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_13]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CategoryName]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[StoreId]"
-                      cachedDataType="i4"
-                      cachedName="StoreId"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_14]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[StoreId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4450,7 +4260,7 @@ WHERE
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
                       codePage="1252"
                       dataType="str"
-                      length="45"
+                      length="255"
                       name="Param_0">
                       <properties>
                         <property
@@ -4462,8 +4272,7 @@ WHERE
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
                       codePage="1252"
-                      dataType="str"
-                      length="45"
+                      dataType="text"
                       name="Param_1">
                       <properties>
                         <property
@@ -4476,7 +4285,7 @@ WHERE
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
+                      length="4"
                       name="Param_2">
                       <properties>
                         <property
@@ -4488,7 +4297,8 @@ WHERE
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="20"
                       name="Param_3">
                       <properties>
                         <property
@@ -4499,9 +4309,7 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
-                      codePage="1252"
-                      dataType="str"
-                      length="4"
+                      dataType="ui1"
                       name="Param_4">
                       <properties>
                         <property
@@ -4512,10 +4320,10 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="Param_5">
+                      dataType="numeric"
+                      name="Param_5"
+                      precision="4"
+                      scale="2">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4525,7 +4333,7 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_6]"
-                      dataType="ui1"
+                      dataType="i2"
                       name="Param_6">
                       <properties>
                         <property
@@ -4538,30 +4346,6 @@ WHERE
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_7]"
                       dataType="numeric"
                       name="Param_7"
-                      precision="4"
-                      scale="2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_8]"
-                      dataType="i2"
-                      name="Param_8">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_9]"
-                      dataType="numeric"
-                      name="Param_9"
                       precision="5"
                       scale="2">
                       <properties>
@@ -4572,10 +4356,34 @@ WHERE
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_10]"
+                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_8]"
                       codePage="1252"
                       dataType="str"
                       length="10"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_9]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_10]"
+                      dataType="dbTimeStamp"
                       name="Param_10">
                       <properties>
                         <property
@@ -4586,61 +4394,13 @@ WHERE
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_11]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="i4"
                       name="Param_11">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
                           name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_12]"
-                      dataType="dbTimeStamp"
-                      name="Param_12">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_13]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      name="Param_13">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_14]"
-                      dataType="i4"
-                      name="Param_14">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_15]"
-                      dataType="i4"
-                      name="Param_15">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -4757,22 +4517,6 @@ WHERE
                       externalMetadataColumnId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FilmId]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FilmId]" />
                     <inputColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[FirstName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="45"
-                      cachedName="FirstName"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FirstName]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FirstName]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[LastName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="45"
-                      cachedName="LastName"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastName]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastName]" />
-                    <inputColumn
                       refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Title]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -4853,20 +4597,6 @@ WHERE
                       cachedName="LastUpdate"
                       externalMetadataColumnId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastUpdate]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastUpdate]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[CategoryName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="25"
-                      cachedName="CategoryName"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CategoryName]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CategoryName]" />
-                    <inputColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[StoreId]"
-                      cachedDataType="i4"
-                      cachedName="StoreId"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[StoreId]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[StoreId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4874,18 +4604,6 @@ WHERE
                       refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FilmId]"
                       dataType="i4"
                       name="FilmId" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="LastName" />
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Title]"
                       codePage="1252"
@@ -4945,16 +4663,6 @@ WHERE
                       refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[LastUpdate]"
                       dataType="dbTimeStamp"
                       name="LastUpdate" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      name="CategoryName" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[StoreId]"
-                      dataType="i4"
-                      name="StoreId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5010,8 +4718,6 @@ WHERE
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
     f.film_id AS FilmId, 
-    a.first_name AS FirstName, 
-    a.last_name AS LastName, 
     f.title AS Title, 
     f.description AS Description, 
     f.release_year AS ReleaseYear, 
@@ -5022,23 +4728,11 @@ WHERE
     f.replacement_cost AS ReplacementCost, 
     f.rating AS Rating, 
     f.special_features AS SpecialFeatures, 
-    f.last_update AS LastUpdate, 
-    c.name AS CategoryName,
-i.store_id AS StoreId
+    f.last_update AS LastUpdate
 FROM 
     dbo.film f
 INNER JOIN 
-    dbo.film_actor fa ON f.film_id = fa.film_id
-INNER JOIN 
-    dbo.actor a ON fa.actor_id = a.actor_id
-INNER JOIN 
-    dbo.film_category fc ON f.film_id = fc.film_id
-INNER JOIN 
-    dbo.category c ON fc.category_id = c.category_id 
-INNER JOIN 
     dbo.language l ON f.language_id = l.language_id
-INNER JOIN 
-    dbo.inventory i ON f.film_id = i.film_id
 WHERE f.last_update &gt;= ?;</property>
                 <property
                   dataType="System.String"
@@ -5083,28 +4777,6 @@ WHERE f.last_update &gt;= ?;</property>
                       externalMetadataColumnId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[FilmId]"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FilmId]"
                       name="FilmId"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[FirstName]"
-                      length="45"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[FirstName]"
-                      name="FirstName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[LastName]"
-                      length="45"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastName]"
-                      name="LastName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Title]"
@@ -5220,26 +4892,6 @@ WHERE f.last_update &gt;= ?;</property>
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LastUpdate]"
                       name="LastUpdate"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[CategoryName]"
-                      length="25"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CategoryName]"
-                      name="CategoryName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[StoreId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[StoreId]"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[StoreId]"
-                      name="StoreId"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5247,18 +4899,6 @@ WHERE f.last_update &gt;= ?;</property>
                       refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[FilmId]"
                       dataType="i4"
                       name="FilmId" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      name="LastName" />
                     <externalMetadataColumn
                       refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Title]"
                       codePage="1252"
@@ -5318,16 +4958,6 @@ WHERE f.last_update &gt;= ?;</property>
                       refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[LastUpdate]"
                       dataType="dbTimeStamp"
                       name="LastUpdate" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      name="CategoryName" />
-                    <externalMetadataColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[StoreId]"
-                      dataType="i4"
-                      name="StoreId" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5340,20 +4970,6 @@ WHERE f.last_update &gt;= ?;</property>
                       dataType="i4"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[FilmId]"
                       name="FilmId" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[FirstName]"
-                      name="FirstName" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="45"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[LastName]"
-                      name="LastName" />
                     <outputColumn
                       refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Title]"
                       codePage="1252"
@@ -5424,18 +5040,6 @@ WHERE f.last_update &gt;= ?;</property>
                       dataType="dbTimeStamp"
                       lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[LastUpdate]"
                       name="LastUpdate" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[CategoryName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[CategoryName]"
-                      name="CategoryName" />
-                    <outputColumn
-                      refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[StoreId]"
-                      dataType="i4"
-                      lineageId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[StoreId]"
-                      name="StoreId" />
                     <outputColumn
                       refId="Package\Incremental Load FilmSA\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -9082,7 +8686,7 @@ WHERE s.last_update &gt;= ?;</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{023BB723-67B3-459A-897E-A0603865A04C}"
-          SQLTask:SqlStatementSource="SELECT MAX(LastUpdate) AS LastUpdateDate FROM dbo.StoreSA"
+          SQLTask:SqlStatementSource="SELECT MAX(StoreLastUpdate) AS LastUpdateDate FROM dbo.StoreSA"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LastUpdateDate"
@@ -9246,9 +8850,29 @@ WHERE s.last_update &gt;= ?;</property>
           Id="Package\Incremental Load StoreSA"
           TopLeft="734.571428571429,316.333333333333" />
         <NodeLayout
+          Size="244,42"
+          Id="Package\SQL Get LastUpdateDate Customer"
+          TopLeft="396.6,405.5" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\SQL Get LastUpdateDate Film"
+          TopLeft="396.6,320.75" />
+        <NodeLayout
           Size="238,42"
           Id="Package\SQL Get LastUpdateDate Location"
           TopLeft="734.571428571429,144" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\SQL Get LastUpdateDate Rental"
+          TopLeft="396.6,578" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\SQL Get LastUpdateDate Staff"
+          TopLeft="396.6,493.25" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\SQL Get LastUpdateDate Store"
+          TopLeft="396.6,227" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="724.333333333333,84">
@@ -9322,19 +8946,31 @@ WHERE s.last_update &gt;= ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="853.571428571429,186">
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="518.6,535.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.1666666666667"
+              EndConnector="334.971428571429,39.5833333333334"
               Start="0,0"
-              End="0,36.6666666666667">
+              End="334.971428571429,32.0833333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.6666666666667" />
+                    End="0,15.7916666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.7916666666667"
+                    Point2="0,19.7916666666667"
+                    Point3="4,19.7916666666667" />
+                  <mssgle:LineSegment
+                    End="330.971428571429,19.7916666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="330.971428571429,19.7916666666667"
+                    Point2="334.971428571429,19.7916666666667"
+                    Point3="334.971428571429,23.7916666666667" />
+                  <mssgle:LineSegment
+                    End="334.971428571429,32.0833333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9343,26 +8979,62 @@ WHERE s.last_update &gt;= ?;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="244,42"
-          Id="Package\SQL Get LastUpdateDate Store"
-          TopLeft="396.6,227" />
-        <NodeLayout
-          Size="244,42"
-          Id="Package\SQL Get LastUpdateDate Film"
-          TopLeft="396.6,320.75" />
-        <NodeLayout
-          Size="244,42"
-          Id="Package\SQL Get LastUpdateDate Customer"
-          TopLeft="396.6,405.5" />
-        <NodeLayout
-          Size="244,42"
-          Id="Package\SQL Get LastUpdateDate Staff"
-          TopLeft="396.6,493.25" />
-        <NodeLayout
-          Size="244,42"
-          Id="Package\SQL Get LastUpdateDate Rental"
-          TopLeft="396.6,578" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="734.571428571429,597.416666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-93.9714285714286,0"
+              Start="0,0"
+              End="-86.4714285714286,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-86.4714285714286,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="518.6,620">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="334.971428571429,41"
+              Start="0,0"
+              End="334.971428571429,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="330.971428571429,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="330.971428571429,20.5"
+                    Point2="334.971428571429,20.5"
+                    Point3="334.971428571429,24.5" />
+                  <mssgle:LineSegment
+                    End="334.971428571429,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="734.571428571429,249.583333333333">
@@ -9476,6 +9148,28 @@ WHERE s.last_update &gt;= ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="853.571428571429,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.1666666666667"
+              Start="0,0"
+              End="0,36.6666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.6666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
           TopLeft="734.571428571429,425">
           <EdgeLayout.Curve>
@@ -9553,96 +9247,6 @@ WHERE s.last_update &gt;= ?;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="518.6,535.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="334.971428571429,39.5833333333334"
-              Start="0,0"
-              End="334.971428571429,32.0833333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.7916666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.7916666666667"
-                    Point2="0,19.7916666666667"
-                    Point3="4,19.7916666666667" />
-                  <mssgle:LineSegment
-                    End="330.971428571429,19.7916666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="330.971428571429,19.7916666666667"
-                    Point2="334.971428571429,19.7916666666667"
-                    Point3="334.971428571429,23.7916666666667" />
-                  <mssgle:LineSegment
-                    End="334.971428571429,32.0833333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="734.571428571429,597.416666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-93.9714285714286,0"
-              Start="0,0"
-              End="-86.4714285714286,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-86.4714285714286,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="518.6,620">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="334.971428571429,41"
-              Start="0,0"
-              End="334.971428571429,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
-                  <mssgle:LineSegment
-                    End="330.971428571429,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="330.971428571429,20.5"
-                    Point2="334.971428571429,20.5"
-                    Point3="334.971428571429,24.5" />
-                  <mssgle:LineSegment
-                    End="334.971428571429,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -9696,11 +9300,11 @@ WHERE s.last_update &gt;= ?;</property>
           Id="Package\Full Load\OLE_SRC_Film_OTLP"
           TopLeft="488.1,27.5" />
         <NodeLayout
-          Size="192,42"
+          Size="166,42"
           Id="Package\Full Load\OLE_DST_Film_SA"
-          TopLeft="485.7,174.916666666667" />
+          TopLeft="492.7,174.916666666667" />
         <EdgeLayout
-          Id="Package\Full Load.Paths[Salida de origen de OLE DB5]"
+          Id="Package\Full Load.Paths[Salida de origen de OLE DB4]"
           TopLeft="1014.05,69.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9722,7 +9326,7 @@ WHERE s.last_update &gt;= ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Full Load.Paths[Salida de origen de OLE DB4]"
+          Id="Package\Full Load.Paths[Salida de origen de OLE DB3]"
           TopLeft="1227.75,69.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9744,7 +9348,7 @@ WHERE s.last_update &gt;= ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Full Load.Paths[Salida de origen de OLE DB3]"
+          Id="Package\Full Load.Paths[Salida de origen de OLE DB2]"
           TopLeft="796.6,69.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9766,7 +9370,7 @@ WHERE s.last_update &gt;= ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Full Load.Paths[Salida de origen de OLE DB2]"
+          Id="Package\Full Load.Paths[Salida de origen de OLE DB1]"
           TopLeft="367.7,69.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9788,7 +9392,7 @@ WHERE s.last_update &gt;= ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Full Load.Paths[Salida de origen de OLE DB1]"
+          Id="Package\Full Load.Paths[Salida de origen de OLE DB]"
           TopLeft="150.75,69.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9810,19 +9414,19 @@ WHERE s.last_update &gt;= ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Full Load.Paths[Salida de origen de OLE DB]"
-          TopLeft="579.65,69.5">
+          Id="Package\Full Load.Paths[Salida de origen de OLE DB5]"
+          TopLeft="576.65,69.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
               EndConnector="0,105.416666666667"
               Start="0,0"
-              End="0,97.9166666666667">
+              End="0,97.916666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,97.9166666666667" />
+                    End="0,97.916666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9976,21 +9580,57 @@ WHERE s.last_update &gt;= ?;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="164,42"
-          Id="Package\Incremental Load CustomerSA\Origen de OLE DB"
-          TopLeft="487,115" />
-        <NodeLayout
           Size="168,42"
           Id="Package\Incremental Load CustomerSA\Destino de OLE DB"
           TopLeft="251,434" />
         <NodeLayout
-          Size="125,42"
-          Id="Package\Incremental Load CustomerSA\Búsqueda"
-          TopLeft="508,214" />
+          Size="164,42"
+          Id="Package\Incremental Load CustomerSA\Origen de OLE DB"
+          TopLeft="487,115" />
         <NodeLayout
           Size="177,42"
           Id="Package\Incremental Load CustomerSA\Comando de OLE DB"
           TopLeft="700,442" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Incremental Load CustomerSA\Búsqueda"
+          TopLeft="508,214" />
+        <EdgeLayout
+          Id="Package\Incremental Load CustomerSA.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="590,256">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="198.5,186"
+              Start="0,0"
+              End="198.5,178.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.8104265402844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.8104265402844"
+                    Point2="0,75.8104265402844"
+                    Point3="4,75.8104265402844" />
+                  <mssgle:LineSegment
+                    End="194.5,75.8104265402844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="194.5,75.8104265402844"
+                    Point2="198.5,75.8104265402844"
+                    Point3="198.5,79.8104265402844" />
+                  <mssgle:LineSegment
+                    End="198.5,178.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.569023437500007,80.8104265402844,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Incremental Load CustomerSA.Paths[Salida de origen de OLE DB]"
           TopLeft="569.75,157">
@@ -10010,7 +9650,9 @@ WHERE s.last_update &gt;= ?;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10049,80 +9691,88 @@ WHERE s.last_update &gt;= ?;</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Incremental Load CustomerSA.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="590,256">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="198.5,186"
-              Start="0,0"
-              End="198.5,178.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,71.8104265402844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,71.8104265402844"
-                    Point2="0,75.8104265402844"
-                    Point3="4,75.8104265402844" />
-                  <mssgle:LineSegment
-                    End="194.5,75.8104265402844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="194.5,75.8104265402844"
-                    Point2="198.5,75.8104265402844"
-                    Point3="198.5,79.8104265402844" />
-                  <mssgle:LineSegment
-                    End="198.5,178.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-0.569023437500007,80.8104265402844,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load CustomerSA\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load CustomerSA\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load CustomerSA\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[CustomerSA]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Incremental Load FilmSA">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="168,42"
+          Id="Package\Incremental Load FilmSA\Destino de OLE DB"
+          TopLeft="264,492" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Incremental Load FilmSA\Comando de OLE DB"
+          TopLeft="752,512" />
+        <NodeLayout
           Size="164,42"
           Id="Package\Incremental Load FilmSA\Origen de OLE DB"
           TopLeft="533,155" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Incremental Load FilmSA\Destino de OLE DB"
-          TopLeft="262,463" />
-        <NodeLayout
           Size="125,42"
           Id="Package\Incremental Load FilmSA\Búsqueda"
-          TopLeft="551,264" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Incremental Load FilmSA\Comando de OLE DB"
-          TopLeft="764,487" />
+          TopLeft="554,291" />
         <EdgeLayout
           Id="Package\Incremental Load FilmSA.Paths[Salida de origen de OLE DB]"
-          TopLeft="614.25,197">
+          TopLeft="615.75,197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,67"
+              EndConnector="0,94"
               Start="0,0"
-              End="0,59.5">
+              End="0,86.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.5" />
+                    End="0,86.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10133,79 +9783,100 @@ WHERE s.last_update &gt;= ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Incremental Load FilmSA.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="613.5,306">
+          TopLeft="597,333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-267.5,157"
+              EndConnector="-249,159"
               Start="0,0"
-              End="-267.5,149.5">
+              End="-249,151.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,74.5" />
+                    End="0,60.8056872037915" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,74.5"
-                    Point2="0,78.5"
-                    Point3="-4,78.5" />
+                    Point1="0,60.8056872037915"
+                    Point2="0,64.8056872037915"
+                    Point3="-4,64.8056872037915" />
                   <mssgle:LineSegment
-                    End="-263.5,78.5" />
+                    End="-245,64.8056872037915" />
                   <mssgle:CubicBezierSegment
-                    Point1="-263.5,78.5"
-                    Point2="-267.5,78.5"
-                    Point3="-267.5,82.5" />
+                    Point1="-245,64.8056872037915"
+                    Point2="-249,64.8056872037915"
+                    Point3="-249,68.8056872037915" />
                   <mssgle:LineSegment
-                    End="-267.5,149.5" />
+                    End="-249,151.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-240.6390234375,83.5,213.778046875,12.1953125"
+              BoundingBox="-231.3890234375,69.8056872037915,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Incremental Load FilmSA.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="633,306">
+          TopLeft="636,333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="219.5,181"
+              EndConnector="204.5,179"
               Start="0,0"
-              End="219.5,173.5">
+              End="204.5,171.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69.7725118483412" />
+                    End="0,68.957345971564" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,69.7725118483412"
-                    Point2="0,73.7725118483412"
-                    Point3="4,73.7725118483412" />
+                    Point1="0,68.957345971564"
+                    Point2="0,72.957345971564"
+                    Point3="4,72.957345971564" />
                   <mssgle:LineSegment
-                    End="215.5,73.7725118483412" />
+                    End="200.5,72.957345971564" />
                   <mssgle:CubicBezierSegment
-                    Point1="215.5,73.7725118483412"
-                    Point2="219.5,73.7725118483412"
-                    Point3="219.5,77.7725118483412" />
+                    Point1="200.5,72.957345971564"
+                    Point2="204.5,72.957345971564"
+                    Point3="204.5,76.957345971564" />
                   <mssgle:LineSegment
-                    End="219.5,173.5" />
+                    End="204.5,171.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="9.93097656249999,78.7725118483412,199.638046875,12.1953125"
+              BoundingBox="2.43097656249999,77.957345971564,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load FilmSA\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load FilmSA\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Incremental Load LocationSA">
     <LayoutInfo>
@@ -10246,7 +9917,9 @@ WHERE s.last_update &gt;= ?;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10374,21 +10047,57 @@ WHERE s.last_update &gt;= ?;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="164,42"
-          Id="Package\Incremental Load RentalSA\Origen de OLE DB"
-          TopLeft="533,228" />
-        <NodeLayout
           Size="168,42"
           Id="Package\Incremental Load RentalSA\Destino de OLE DB"
           TopLeft="314,451" />
         <NodeLayout
-          Size="125,42"
-          Id="Package\Incremental Load RentalSA\Búsqueda"
-          TopLeft="552,313" />
+          Size="164,42"
+          Id="Package\Incremental Load RentalSA\Origen de OLE DB"
+          TopLeft="533,228" />
         <NodeLayout
           Size="177,42"
           Id="Package\Incremental Load RentalSA\Comando de OLE DB"
           TopLeft="733,447" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Incremental Load RentalSA\Búsqueda"
+          TopLeft="552,313" />
+        <EdgeLayout
+          Id="Package\Incremental Load RentalSA.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="634,355">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="187.5,92"
+              Start="0,0"
+              End="187.5,84.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.4976303317535" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.4976303317535"
+                    Point2="0,37.4976303317535"
+                    Point3="4,37.4976303317535" />
+                  <mssgle:LineSegment
+                    End="183.5,37.4976303317535" />
+                  <mssgle:CubicBezierSegment
+                    Point1="183.5,37.4976303317535"
+                    Point2="187.5,37.4976303317535"
+                    Point3="187.5,41.4976303317535" />
+                  <mssgle:LineSegment
+                    End="187.5,84.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-6.06902343750001,42.4976303317535,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Incremental Load RentalSA.Paths[Salida de origen de OLE DB]"
           TopLeft="614.75,270">
@@ -10408,7 +10117,9 @@ WHERE s.last_update &gt;= ?;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10447,45 +10158,53 @@ WHERE s.last_update &gt;= ?;</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Incremental Load RentalSA.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="634,355">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="187.5,92"
-              Start="0,0"
-              End="187.5,84.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.4976303317535" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.4976303317535"
-                    Point2="0,37.4976303317535"
-                    Point3="4,37.4976303317535" />
-                  <mssgle:LineSegment
-                    End="183.5,37.4976303317535" />
-                  <mssgle:CubicBezierSegment
-                    Point1="183.5,37.4976303317535"
-                    Point2="187.5,37.4976303317535"
-                    Point3="187.5,41.4976303317535" />
-                  <mssgle:LineSegment
-                    End="187.5,84.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-6.06902343750001,42.4976303317535,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load RentalSA\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load RentalSA\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load RentalSA\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[RentalSA]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Incremental Load StaffSA">
     <LayoutInfo>
@@ -10500,13 +10219,13 @@ WHERE s.last_update &gt;= ?;</property>
           Id="Package\Incremental Load StaffSA\Destino de OLE DB"
           TopLeft="236,499" />
         <NodeLayout
-          Size="125,42"
-          Id="Package\Incremental Load StaffSA\Búsqueda"
-          TopLeft="520,305" />
-        <NodeLayout
           Size="177,42"
           Id="Package\Incremental Load StaffSA\Comando de OLE DB"
           TopLeft="752,530" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Incremental Load StaffSA\Búsqueda"
+          TopLeft="520,305" />
         <EdgeLayout
           Id="Package\Incremental Load StaffSA.Paths[Salida de origen de OLE DB]"
           TopLeft="585.25,230">
@@ -10526,7 +10245,9 @@ WHERE s.last_update &gt;= ?;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10604,19 +10325,67 @@ WHERE s.last_update &gt;= ?;</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load StaffSA\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load StaffSA\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load StaffSA\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[StaffSA]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Incremental Load StoreSA">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="168,42"
+          Id="Package\Incremental Load StoreSA\Destino de OLE DB"
+          TopLeft="319,465" />
+        <NodeLayout
           Size="164,42"
           Id="Package\Incremental Load StoreSA\Origen de OLE DB"
           TopLeft="527,169" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Incremental Load StoreSA\Destino de OLE DB"
-          TopLeft="319,465" />
+          Size="177,42"
+          Id="Package\Incremental Load StoreSA\Comando de OLE DB"
+          TopLeft="713,469" />
         <NodeLayout
           Size="125,42"
           Id="Package\Incremental Load StoreSA\Búsqueda"
@@ -10640,7 +10409,9 @@ WHERE s.last_update &gt;= ?;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10679,10 +10450,6 @@ WHERE s.last_update &gt;= ?;</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Incremental Load StoreSA\Comando de OLE DB"
-          TopLeft="713,469" />
         <EdgeLayout
           Id="Package\Incremental Load StoreSA.Paths[Salida de entradas coincidentes de búsqueda]"
           TopLeft="629,328">
@@ -10723,14 +10490,6 @@ WHERE s.last_update &gt;= ?;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load StoreSA\Origen de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Incremental Load StoreSA\Destino de OLE DB">
     <Properties>
       <Property>
@@ -10744,12 +10503,20 @@ WHERE s.last_update &gt;= ?;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Incremental Load StoreSA\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Incremental Load StoreSA\Búsqueda">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10759,31 +10526,10 @@ WHERE s.last_update &gt;= ?;</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load FilmSA\Origen de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load FilmSA\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -10799,138 +10545,6 @@ WHERE s.last_update &gt;= ?;</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[FilmSA]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load CustomerSA\Origen de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load CustomerSA\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load CustomerSA\Búsqueda">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[CustomerSA]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load StaffSA\Origen de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load StaffSA\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load StaffSA\Búsqueda">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[StaffSA]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load RentalSA\Origen de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load RentalSA\Destino de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Incremental Load RentalSA\Búsqueda">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[RentalSA]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
